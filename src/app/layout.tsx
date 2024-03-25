@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -56,7 +57,9 @@ export default function RootLayout({
               </p>
 
               <div className='mx-auto mt-16 w-full max-w-2xl flex flex-col'>
+              <Suspense>
                 <SearchBar />
+                </Suspense>
 
                 {children}
               </div>
